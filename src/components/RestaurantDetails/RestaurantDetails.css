@@ -1,0 +1,127 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* border: 5px solid green; */
+  width: 100%;
+  gap: 8px;
+  place-items: center;
+  padding: 0.8em 0.6em;
+}
+
+.list-container {
+  font-size: 0.9rem;
+  padding-bottom: 0%;
+  /* border: 1px solid black; */
+  box-shadow: 8px 8px 8px gray;
+  width: 90%;
+}
+
+.grid-div {
+  padding: 1em 0.8em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-div .content {
+  text-align: left;
+}
+
+.grid-div .img-div {
+  width: 33%;
+  border: 1px solid red;
+}
+
+.grid-div .ratings {
+  display: flex;
+  border: 1px solid black;
+  width: 80px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.online-payment-div {
+  margin-top: 20px;
+  border: 1px solid green;
+  text-align: right;
+}
+.online-payment-div button,
+span {
+  border: none;
+  background-color: rgb(233, 244, 236);
+}
+.online-payment-div button {
+  padding: 0.4em 0.8em;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1250px) {
+  .list-container {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .list-container {
+    width: 100%;
+  }
+  .grid {
+    width: 100%;
+    gap: 4px;
+    place-items: center;
+    padding: 0.8em 0.4em;
+  }
+  .grid-div .ratings {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .grid {
+    padding: 0;
+  }
+  .grid-div .content {
+    font-size: 0.5rem;
+  }
+  .grid-div {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  /* body {
+    background-color: red;
+  } */
+  .grid-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .grid-div .content h2 {
+    font-size: 1rem;
+  }
+  .grid-div .content {
+    text-align: left;
+    width: 100%;
+    font-size: 0.6rem;
+  }
+
+  .grid-div .ratings {
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .grid-div .img-div {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 640px) and (min-width: 340px) {
+  .grid {
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+  .list-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
